@@ -216,7 +216,7 @@ echo $SSH_AUTH_SOCK                   # /run/user/<uid>/ssh-agent.socket
 systemctl --user status ssh-agent     # active (running)
 ```
 
-**A.2. Script de carga de la clave (`/home/azureuser/.local/bin/ssh_configuration.sh`)**
+**A.2. Script de carga de la clave (`~/.local/bin/ssh_configuration.sh`)**
 
 Como el agente ya lo gestiona systemd, el script se limita a traer la clave desde Key Vault y añadirla con `ssh-add`. Ya **no** arranca ningún agente y **no** hace falta ejecutarlo con `source`. Personaliza `KEY_VAULT_NAME` y `SECRET_NAME`:
 
